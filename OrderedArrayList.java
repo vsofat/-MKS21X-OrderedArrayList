@@ -2,8 +2,19 @@ import java.util.ArrayList;
 
 public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(){
-      super();
+      super(); // automatically calls it if you don't add this code
     }
+  public NoNullArrayList(){
+      super(startingCapacity);
+    }
+  public String set(int index, String value){
+    if (value == null){
+       throw new IllegalArgumentException();
+    }
+    return super.set(index,value);
+    }
+
+
 
 /*  is an ArrayList of T that cannot take a null as a value.
 
