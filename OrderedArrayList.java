@@ -13,7 +13,18 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     }
     return super.set(index,value);
     }
-
+  public boolean add(T element){
+    if (element == null){
+      throw new IllegalArgumentException();
+    }
+    return super.add(element);
+    }
+  public void add(int index, T element){
+    if (element == null){
+      throw new IllegalArgumentException();
+    }
+    return super.add(index, element);
+    }
 
 
 /*  is an ArrayList of T that cannot take a null as a value.
