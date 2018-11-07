@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
   public OrderedArrayList(){
@@ -9,7 +10,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
   public int FindIndex(T element){
   		for(int index = 0; index < this.size(); index++){
-  			if (this.get(i).compareTo(element) > 0){
+  			if (this.get(index).compareTo(element) > 0){
   				return index;
   			}
   		}
@@ -39,6 +40,6 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     if (element == null) {
       throw new IllegalArgumentException("ERROR: given value is null and can't be added");
             }
-            add(element);
+    add(element);
     }
   }
