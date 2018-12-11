@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T>{
+public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T> {
   public OrderedArrayList(){
     super();
   }
@@ -29,13 +29,14 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
       throw new IllegalArgumentException("ERROR: given value is null and can't be added");
     }
     for (int i = 0; i < size(); i++) {
-      if (compareTo(get(i)) <= 0) {
+      if (element.compareTo(this.get(i)) <= 0) {
         super.add(i, element);
         return true;
       }
-    }
-    return super.add(element);
-    }
+  }
+  super.add(0,element);
+  return true;
+}
   public void add(int index, T element) {
     if (element == null) {
       throw new IllegalArgumentException("ERROR: given value is null and can't be added");
