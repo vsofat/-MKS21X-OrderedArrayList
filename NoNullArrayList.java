@@ -8,11 +8,13 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   public NoNullArrayList(int startingCapacity){
       super(startingCapacity);
     }
-  public String set(int index, String element){
+  public T set(int index, T element){
     if (element == null){
        throw new IllegalArgumentException("ERROR: given element is a null value and can not be set");
     }
-    return super.set(index,element);
+    else{
+      super.set(index,element);}
+    return element;
     }
   public boolean add(T element){
     if (element == null){
@@ -24,7 +26,9 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     if (element == null){
       throw new IllegalArgumentException("ERROR: given element is a null value and can not be added");
     }
-    return super.add(index, element);
+    else{
+       super.add(index, element);
+     }
     }
 
 
