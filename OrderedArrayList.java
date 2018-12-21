@@ -2,7 +2,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T> {
-  private static final long serialVersionUID = 100000000;
   public OrderedArrayList(){
     super();
   }

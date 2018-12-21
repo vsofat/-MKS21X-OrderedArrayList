@@ -1,6 +1,5 @@
 public class VFDriver {
   public static void main(String[] args) {
-    //driver courtesy of Vincent Fong, via google group
     // NoNullArrayList
 
     NoNullArrayList<String> noNulls = new NoNullArrayList<>();
@@ -49,35 +48,5 @@ public class VFDriver {
     System.out.println("OrderedArrayList testing!");
     System.out.println();
 
-    System.out.println("Adding 10 numbers in reverse order to OrderedArrayList ints:");
-    OrderedArrayList<Integer> ints = new OrderedArrayList<>(10);
-    for(int i = 0; i < 10; i++) {
-      int prInt = (9 - i);
-      Integer j = new Integer((prInt));
-      ints.add(j);
-    }
-    System.out.print("Ints (should be 0-9 in ascending order): ");
-    System.out.println(ints);
-    System.out.println("----------");
 
-    System.out.println("Adding 10 more numbers to index 0:");
-    for(int i = 10; i < 20; i++) {
-      Integer j = new Integer(i);
-      ints.add(0, j);
-    }
-    System.out.print("Ints (should be 0-19 in ascending order): ");
-    System.out.println(ints);
-    System.out.println("----------");
-
-    System.out.println("Setting ints 20-29 (in a weird way) in list nums:");
-    for(int i = 0; i < 10; i++) {
-      int j = i + 20;
-      Integer k = new Integer(j);
-      ints.set(i, k);
-      System.out.println(ints);
-    }
-    System.out.print("Ints (should print [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]): ");
-    System.out.println(ints);
-    System.out.println("----------");
-  }
-}
+}}
